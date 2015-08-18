@@ -28,6 +28,7 @@
 			Smag="0.16"
 		/>
 	</Model>
+	<Log Iterations="100"/>
 	<VTK Iterations="1000"/>
-	<Solve Iterations="10000"/>
+	<Solve Iterations="1000"/>
 </CLBConfig>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<CLBConfig version="2.0" output="output/">
+        <Geometry nx="512" ny="512" predef="none" model="MRT">
+		<MRT><Box/></MRT>
+
+		<None name="zdrop">
+            			<Sphere dx="206" nx="100" dy="206" ny="100"/>
+<!--			<Sphere dx="103" nx="50" dy="103" ny="50"/>-->
+		</None>
+
+	</Geometry>
+	<Model>
+		<Params InletVelocity="0.005"/>
+		<Params omega="1"/>
+		<Params
+			Density="3.2600529440452366"
+			Density-zdrop="0.014500641645077492"
+			Temperature="0.56"
+			FAcc="1"
+			Magic="0.01"
+			MagicA="-0.152"
+			MagicF="-0.6666666666666"
+			GravitationY="0.0"
+			GravitationX="0.0"
+            MovingWallVelocity="0.000"
+            S0="0"
+            S1="0"
+            S2="0"
+            S3="-0.333333"
+            S4="0"
+            S5="0"
+            S6="0"
+            S7="0.00"
+            S8="0.00"         
+
+         />
+	</Model>
+    <Solve   Iterations="50" output="output/">
+      <VTK Iterations="10"/>
+      <CallPython module="runexternal" function="test" pass_component="f0"/>
+  </Solve>
+
+<VTK/>
+</CLBConfig>

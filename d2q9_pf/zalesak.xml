@@ -33,7 +33,7 @@
         <Params W="0.33333"/>
         <Params M="0.001"/>
         <Params GravitationX="0.0000"/>
-        <!--        <Params GravitationY="0.00001"/>-->
+        <Params GravitationY="0.0000"/>
    </Model>
     <!--
      module.py must be in pythonpath

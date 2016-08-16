@@ -10,10 +10,10 @@
 <PDataArray type="UInt8" Name="OBJECTIVE" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="UInt8" Name="SETTINGZONE" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="UInt8" Name="NONE" format="binary" encoding="base64" NumberOfComponents="1"/>
-<PDataArray type="Float64" Name="Rho" format="binary" encoding="base64" NumberOfComponents="1"/>
-<PDataArray type="Float64" Name="U" format="binary" encoding="base64" NumberOfComponents="3"/>
 <PDataArray type="Float64" Name="Normal" format="binary" encoding="base64" NumberOfComponents="3"/>
 <PDataArray type="Float64" Name="PhaseField" format="binary" encoding="base64" NumberOfComponents="1"/>
+<PDataArray type="Float64" Name="Rho" format="binary" encoding="base64" NumberOfComponents="1"/>
+<PDataArray type="Float64" Name="U" format="binary" encoding="base64" NumberOfComponents="3"/>
 </PCellData>
 </PImageData>
 </VTKFile>

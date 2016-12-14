@@ -37,7 +37,7 @@
 	</Model>
     <Solve   Iterations="50" output="output/">
       <VTK Iterations="10"/>
-      <CallPython module="runexternal" function="test" pass_component="f0"/>
+      <CallPython module="runexternal" function="test" quantities="Rho"/>
   </Solve>
 
 <VTK/>

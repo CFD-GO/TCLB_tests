@@ -10,30 +10,17 @@
 
 	</Geometry>
 	<Model>
-		<Params InletVelocity="0.005"/>
 		<Params omega="1"/>
-		<Params
-			Density="3.2600529440452366"
-			Density-zdrop="0.014500641645077492"
-			Temperature="0.56"
-			FAcc="1"
-			Magic="0.01"
-			MagicA="-0.152"
-			MagicF="-0.6666666666666"
-			GravitationY="0.0"
-			GravitationX="0.0"
-            MovingWallVelocity="0.000"
-            S0="0"
-            S1="0"
-            S2="0"
-            S3="-0.333333"
-            S4="0"
-            S5="0"
-            S6="0"
-            S7="0.00"
-            S8="0.00"         
-
-         />
+		<Params	Density="3.2600529440452366" />
+		<Params	Density-zdrop="0.014500641645077492"/>
+		<Params	Temperature="0.56"/>
+		<Params	FAcc="1"/>
+		<Params	Magic="0.01"/>
+		<Params	MagicA="-0.152"/>
+		<Params	MagicF="-0.6666666666666"/>
+		<Params	GravitationY="0.0"/>
+		<Params	GravitationX="0.0"/>
+		<Params MovingWallVelocity="0.000"/>
 	</Model>
     <Solve   Iterations="50" output="output/">
       <VTK Iterations="10"/>

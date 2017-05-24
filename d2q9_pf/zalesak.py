@@ -61,7 +61,7 @@ def setSwirl(*args):
  #   plt.colorbar()
   #  plt.streamplot(X,Y,Fx,Fy,density=0.6, color='k', linewidth=1)
 #    plt.show()
-
+    return 0
 if __name__ == "__main__":
     Y = list()
     X = list()

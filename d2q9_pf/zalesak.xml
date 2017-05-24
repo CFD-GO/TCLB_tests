@@ -30,8 +30,8 @@
 		<Params RelaxationRate="1"/>
         <Params PhaseField-disc="-0.5" />
         <Params OverwriteVelocityField="1"/>
-        <Params W="0.33333"/>
-        <Params M="0.001"/>
+        <Params IntWidth="0.33333"/>
+        <Params Mobility="0.001"/>
         <Params GravitationX="0.0000"/>
         <Params GravitationY="0.0000"/>
    </Model>
@@ -45,7 +45,7 @@
         <VTK Iterations="500"/>
     </Solve> 
     -->
-    <CallPython module="zalesak" function="setSwirl" pass_component="BC[0],BC[1]"/>
+    <CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
     <!-- prepared for full round in 5000 steps-->
 
 	<Solve Iterations="600" output="output/">

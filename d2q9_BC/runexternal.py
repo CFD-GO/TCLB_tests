@@ -2,6 +2,7 @@
 import numpy as np
 
 def test(*args):
+    
     i0 = 2
     Fx = np.asarray(args[i0])
     shape = Fx.shape
@@ -32,6 +33,6 @@ def test(*args):
 
     Fx[:,:] = -np.sin(Theta) * np.exp(-c1*R**2) * c2
 
-
+    return 0
 if __name__ == "__main__":
     test(0,np.zeros([20,10,1]),np.zeros([20,10,1]))

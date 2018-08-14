@@ -2,8 +2,7 @@
 import numpy as np
 
 def test(*args):
-    
-    i0 = 2
+    i0 = args[0] #number of extra data in fornt of data arrays, those include shape, time and offset
     Fx = np.asarray(args[i0])
     shape = Fx.shape
     Fy = np.asarray(args[i0+1]).reshape((shape[1],shape[0],1))

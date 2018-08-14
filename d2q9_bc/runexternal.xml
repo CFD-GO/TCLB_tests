@@ -21,8 +21,7 @@
 	</Geometry>
 	<Model>
         <Params 
-            Density-inlet="1.00000"
-            Density-outlet="1."
+            Density="1.00000"
             />
     </Model>
     <!--

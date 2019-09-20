@@ -1,13 +1,14 @@
 
 import numpy as np
+from CallPythonHelper import *
 
 def test(*args):
-    i0 = args[0] #number of extra data in fornt of data arrays, those include shape, time and offset
-    Fx = np.asarray(args[i0])
-    shape = Fx.shape
-    Fy = np.asarray(args[i0+1]).reshape((shape[1],shape[0],1))
-    Fx = Fx.reshape((shape[1],shape[0],1))
+    cph = CallPythonHelper(*args)
 
+    Fx = cph.getScalar(0)
+    Fy = cph.getScalar(1)
+
+    shape = Fx.shape
 
     X = np.zeros_like(Fx)
     Y = np.zeros_like(Fy)

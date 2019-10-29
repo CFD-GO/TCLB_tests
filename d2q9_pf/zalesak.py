@@ -1,37 +1,7 @@
 
 import numpy as np
+from CallPythonHelper import *
 #import matplotlib.pyplot as plt
-
-class CallPythonHelper:
-    def __init__(self, *args):
-        nargs = args[0]
-        self.offsets, self.time = args[1:3]
-        self.data = args[nargs:]
-
-    def getVector(self,idx):
-        V = np.asarray(self.data[idx])
-        shape = V.shape
-        return np.asarray(self.data[idx]).reshape((shape[1],shape[0],3))
-
-    def getScalar(self,idx):
-        V = np.asarray(self.data[idx])
-        shape = V.shape
-        return np.asarray(self.data[idx]).reshape((shape[1],shape[0]))
-
-    def getXY(self,scal_idx=0):
-        V = np.asarray(self.data[scal_idx])
-        shape = V.shape
-
-        X = np.zeros([shape[1],shape[0]])
-        Y = np.zeros([shape[1],shape[0]])
-
-        for x in range(shape[0]):
-            X[:,x] = x
-
-        for y in range(shape[1]):
-            Y[y,:] = y
-        return X,Y
-
 
 def setSwirl(*args):
     cph = CallPythonHelper(*args)
@@ -64,7 +34,4 @@ def setSwirl(*args):
 #    plt.show()
     return 0
 if __name__ == "__main__":
-    Y = list()
-    X = list()
-    of = list()
-    test(of, 0, X, Y)
+    print "Use as TCLB <CallPython> input"

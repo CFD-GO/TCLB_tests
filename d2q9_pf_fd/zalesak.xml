@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<CLBConfig version="2.0">
+<CLBConfig version="2.0" permissive="true">
 	<Geometry ny="256" nx="256" predef="none" model="MRT">
 		<MRT>
 			<Box/>
@@ -28,13 +28,13 @@
 		</None>
 	</Geometry>
 	<Model>
-		<Params RelaxationRate="1"/>
-		<Params PhaseField-disc="-0.5"/>
-		<Params OverwriteVelocityField="1"/>
-		<Params IntWidth="0.33333"/>
-		<Params Mobility="0.001"/>
-		<Params GravitationX="0.0000"/>
-		<Params GravitationY="0.0000"/>
+		<Param name="RelaxationRate" value="1"/>
+		<Param name="PhaseField" value="-0.5" zone="disc"/>
+		<Param name="OverwriteVelocityField" value="1"/>
+		<Param name="IntWidth" value="0.33333"/>
+		<Param name="Mobility" value="0.001"/>
+		<Param name="GravitationX" value="0.0000"/>
+		<Param name="GravitationY" value="0.0000"/>
 	</Model>
 	<!--
      module.py must be in pythonpath

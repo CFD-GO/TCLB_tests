@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<CLBConfig version="2.0">
+<CLBConfig version="2.0" permissive="true">
 	<Geometry ny="256" nx="256" predef="none" model="MRT">
 		<MRT>
 			<Box/>
@@ -19,7 +19,7 @@
 -->
 	</Geometry>
 	<Model>
-		<Params Density="1.00000"/>
+		<Param name="Density" value="1.00000"/>
 	</Model>
 	<!--
      module.py must be in pythonpath

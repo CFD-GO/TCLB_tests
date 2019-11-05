@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
-<CLBConfig version="2.0" output="output/" permissive="true">
+<CLBConfig version="2.0" output="output/">
 	<Geometry nx="512" ny="512" predef="none" model="MRT">
 		<MRT>
 			<Box/>
 		</MRT>
 		<None name="zdrop">
 			<Sphere dx="206" nx="100" dy="206" ny="100"/>
-			<!--			<Sphere dx="103" nx="50" dy="103" ny="50"/>-->
 		</None>
 	</Geometry>
 	<Model>
@@ -22,7 +21,7 @@
 		<Param name="GravitationX" value="0.0"/>
 		<Param name="MovingWallVelocity" value="0.000"/>
 	</Model>
-	<Solve Iterations="50" output="output/">
+	<Solve Iterations="50">
 		<VTK Iterations="10"/>
 		<CallPython module="runexternal" function="test" quantities="Rho"/>
 	</Solve>

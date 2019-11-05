@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<CLBConfig version="2.0" permissive="true">
+<CLBConfig version="2.0" output="output/">
 	<Geometry ny="256" nx="256" predef="none" model="MRT">
 		<MRT>
 			<Box/>
@@ -48,7 +48,7 @@
     -->
 	<CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
 	<!-- prepared for full round in 5000 steps-->
-	<Solve Iterations="600" output="output/">
+	<Solve Iterations="600">
 		<VTK Iterations="100"/>
 	</Solve>
 </CLBConfig>

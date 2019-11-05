@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <CLBConfig version="2.0">
-        <Geometry ny="256" nx="256" predef="none" model="MRT">
-            <MRT><Box/></MRT>
-
-            <!--      <EPressure> 
+	<Geometry ny="256" nx="256" predef="none" model="MRT">
+		<MRT>
+			<Box/>
+		</MRT>
+		<!--      <EPressure> 
                 <Box dx="-1"/>
             </EPressure>
             <WPressure>
@@ -19,37 +20,35 @@
                 <Box dy="-1"/>
             </NPressure>
 -->
-            <None name="disc">
-                <Sphere nx="64" ny="64" dx="96" dy="96"/>
-            </None>
-            <None name="plain">
-                <Box nx="16" dx="120" ny="128"/>
-            </None>
-   	   	</Geometry>
+		<None name="disc">
+			<Sphere nx="64" ny="64" dx="96" dy="96"/>
+		</None>
+		<None name="plain">
+			<Box nx="16" dx="120" ny="128"/>
+		</None>
+	</Geometry>
 	<Model>
 		<Params RelaxationRate="1"/>
-        <Params PhaseField-disc="-0.5" />
-        <Params OverwriteVelocityField="1"/>
-        <Params IntWidth="0.33333"/>
-        <Params Mobility="0.001"/>
-        <Params GravitationX="0.0000"/>
-        <Params GravitationY="0.0000"/>
-   </Model>
-    <!--
+		<Params PhaseField-disc="-0.5"/>
+		<Params OverwriteVelocityField="1"/>
+		<Params IntWidth="0.33333"/>
+		<Params Mobility="0.001"/>
+		<Params GravitationX="0.0000"/>
+		<Params GravitationY="0.0000"/>
+	</Model>
+	<!--
      module.py must be in pythonpath
      the "." is added to pythonpath automaticly
      PYTHONPATH=$PYTHONPATH:./example mpirun -np 2 ./CLB/d2q9/main example/runexternal.xml 
 -->
-    <!-- for nic result let phase field equalibrate BEFORE move
+	<!-- for nic result let phase field equalibrate BEFORE move
     <Solve Iterations="2000" output="output/">
         <VTK Iterations="500"/>
     </Solve> 
     -->
-    <CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
-    <!-- prepared for full round in 5000 steps-->
-
+	<CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
+	<!-- prepared for full round in 5000 steps-->
 	<Solve Iterations="600" output="output/">
-        <VTK Iterations="100"/>
-    </Solve>
-
+		<VTK Iterations="100"/>
+	</Solve>
 </CLBConfig>

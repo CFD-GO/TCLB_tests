@@ -1,31 +1,30 @@
 <?xml version="1.0"?>
 <CLBConfig version="2.0" output="output/">
-        <Geometry nx="512" ny="512" predef="none" model="MRT">
-		<MRT><Box/></MRT>
-
+	<Geometry nx="512" ny="512" predef="none" model="MRT">
+		<MRT>
+			<Box/>
+		</MRT>
 		<None name="zdrop">
-            			<Sphere dx="206" nx="100" dy="206" ny="100"/>
-<!--			<Sphere dx="103" nx="50" dy="103" ny="50"/>-->
+			<Sphere dx="206" nx="100" dy="206" ny="100"/>
+			<!--			<Sphere dx="103" nx="50" dy="103" ny="50"/>-->
 		</None>
-
 	</Geometry>
 	<Model>
 		<Params omega="1"/>
-		<Params	Density="3.2600529440452366" />
-		<Params	Density-zdrop="0.014500641645077492"/>
-		<Params	Temperature="0.56"/>
-		<Params	FAcc="1"/>
-		<Params	Magic="0.01"/>
-		<Params	MagicA="-0.152"/>
-		<Params	MagicF="-0.6666666666666"/>
-		<Params	GravitationY="0.0"/>
-		<Params	GravitationX="0.0"/>
+		<Params Density="3.2600529440452366"/>
+		<Params Density-zdrop="0.014500641645077492"/>
+		<Params Temperature="0.56"/>
+		<Params FAcc="1"/>
+		<Params Magic="0.01"/>
+		<Params MagicA="-0.152"/>
+		<Params MagicF="-0.6666666666666"/>
+		<Params GravitationY="0.0"/>
+		<Params GravitationX="0.0"/>
 		<Params MovingWallVelocity="0.000"/>
 	</Model>
-    <Solve   Iterations="50" output="output/">
-      <VTK Iterations="10"/>
-      <CallPython module="runexternal" function="test" quantities="Rho"/>
-  </Solve>
-
-<VTK/>
+	<Solve Iterations="50" output="output/">
+		<VTK Iterations="10"/>
+		<CallPython module="runexternal" function="test" quantities="Rho"/>
+	</Solve>
+	<VTK/>
 </CLBConfig>

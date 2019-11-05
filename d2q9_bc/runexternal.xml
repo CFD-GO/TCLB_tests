@@ -12,7 +12,6 @@
 		</Wall>
 	</Geometry>
 	<Model>
-		<Param name="Density" value="1.00000"/>
 	</Model>
 	<!--
      module.py must be in pythonpath

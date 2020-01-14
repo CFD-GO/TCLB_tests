@@ -1,0 +1,1 @@
+fail $TCLB/CLB/$MODEL/main test.xml

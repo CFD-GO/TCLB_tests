@@ -1,5 +1,5 @@
 need zalesak.py zalesak.xml
-run $TCLB/CLB/$MODEL/main zalesak.xml
+run $SOLVER zalesak.xml
 diff output/zalesak_VTK_P00_00000100.pvti
 sha1 output/zalesak_VTK_P00_00000100.vti
 diff output/zalesak_VTK_P00_00000200.pvti

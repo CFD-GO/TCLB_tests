@@ -1,4 +1,4 @@
 need pythonGeom.xml
-run $TCLB/CLB/$MODEL/main pythonGeom.xml
+run $SOLVER pythonGeom.xml
 diff output/pythonGeom_VTK_P00_00000000.pvti
 sha1 output/pythonGeom_VTK_P00_00000000.vti

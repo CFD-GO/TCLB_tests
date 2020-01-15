@@ -1,5 +1,5 @@
 need runexternal.py runexternal.xml
-run $TCLB/CLB/$MODEL/main runexternal.xml
+run $SOLVER runexternal.xml
 sha1 output/runexternal_VTK_P00_00000010.vti
 sha1 output/runexternal_VTK_P00_00000020.vti
 sha1 output/runexternal_VTK_P00_00000030.vti

@@ -1,5 +1,5 @@
 need drop.xml runexternal.py
-run $TCLB/CLB/$MODEL/main drop.xml
+run $SOLVER drop.xml
 diff output/stats.csv
 diff output/drop_VTK_P00_00000010.pvti
 diff output/drop_VTK_P00_00000020.pvti

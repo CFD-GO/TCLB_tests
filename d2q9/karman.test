@@ -1,5 +1,5 @@
 need karman.xml
-run $TCLB/CLB/d2q9/main karman.xml
+run $SOLVER karman.xml
 csvdiff output/karman_Log_P00_00000000.csv
 diff output/karman_VTK_P00_00001000.pvti
 sha1 output/karman_VTK_P00_00001000.vti

@@ -19,7 +19,7 @@
      PYTHONPATH=$PYTHONPATH:./example mpirun -np 2 ./CLB/d2q9/main example/runexternal.xml 
     -->
 	<CallPython module="runexternal" function="test" densities="BC[0],BC[1]"/>
-	<Solve Iterations="100">
-		<VTK Iterations="10"/>
-	</Solve>
+	<VTK/>
+	<VTK Iterations="100"/>
+	<Solve Iterations="100"/>
 </CLBConfig>

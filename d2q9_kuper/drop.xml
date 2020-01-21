@@ -21,7 +21,7 @@
 		<Param name="GravitationX" value="0.0"/>
 		<Param name="MovingWallVelocity" value="0.000"/>
 	</Model>
-	<VTK Iterations="10"/>
+	<VTK Iterations="50"/>
 	<CallPython module="runexternal" function="test" quantities="Rho"/> 
 	<Solve Iterations="50"/>
 </CLBConfig>

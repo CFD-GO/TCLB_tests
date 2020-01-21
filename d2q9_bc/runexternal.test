@@ -1,22 +1,4 @@
 need runexternal.py runexternal.xml
 run $SOLVER runexternal.xml
-sha1 output/runexternal_VTK_P00_00000010.vti
-sha1 output/runexternal_VTK_P00_00000020.vti
-sha1 output/runexternal_VTK_P00_00000030.vti
-sha1 output/runexternal_VTK_P00_00000040.vti
-sha1 output/runexternal_VTK_P00_00000050.vti
-sha1 output/runexternal_VTK_P00_00000060.vti
-sha1 output/runexternal_VTK_P00_00000070.vti
-sha1 output/runexternal_VTK_P00_00000080.vti
-sha1 output/runexternal_VTK_P00_00000090.vti
-sha1 output/runexternal_VTK_P00_00000100.vti
-diff output/runexternal_VTK_P00_00000010.pvti
-diff output/runexternal_VTK_P00_00000020.pvti
-diff output/runexternal_VTK_P00_00000030.pvti
-diff output/runexternal_VTK_P00_00000040.pvti
-diff output/runexternal_VTK_P00_00000050.pvti
-diff output/runexternal_VTK_P00_00000060.pvti
-diff output/runexternal_VTK_P00_00000070.pvti
-diff output/runexternal_VTK_P00_00000080.pvti
-diff output/runexternal_VTK_P00_00000090.pvti
-diff output/runexternal_VTK_P00_00000100.pvti
+pvtidiff output/runexternal_VTK_P00_00000000.pvti
+pvtidiff output/runexternal_VTK_P00_00000100.pvti

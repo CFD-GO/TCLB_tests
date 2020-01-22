@@ -8,7 +8,6 @@
 <PDataArray type="UInt8" Name="DESIGNSPACE" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="UInt8" Name="OBJECTIVE" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="UInt8" Name="SETTINGZONE" format="binary" encoding="base64" NumberOfComponents="1"/>
-<PDataArray type="UInt8" Name="ALL" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="Float64" Name="Rho" format="binary" encoding="base64" NumberOfComponents="1"/>
 <PDataArray type="Float64" Name="U" format="binary" encoding="base64" NumberOfComponents="3"/>
 </PCellData>

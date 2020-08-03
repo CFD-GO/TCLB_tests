@@ -1,12 +1,3 @@
 need zalesak.py zalesak.xml
 run $SOLVER zalesak.xml
-diff output/zalesak_VTK_P00_00000100.pvti
-sha1 output/zalesak_VTK_P00_00000100.vti
-diff output/zalesak_VTK_P00_00000200.pvti
-sha1 output/zalesak_VTK_P00_00000200.vti
-diff output/zalesak_VTK_P00_00000300.pvti
-sha1 output/zalesak_VTK_P00_00000300.vti
-diff output/zalesak_VTK_P00_00000400.pvti
-sha1 output/zalesak_VTK_P00_00000400.vti
-diff output/zalesak_VTK_P00_00000500.pvti
-sha1 output/zalesak_VTK_P00_00000500.vti
+pvtidiff output/zalesak_VTK_P00_00000600.pvti

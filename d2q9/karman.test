@@ -1,5 +1,7 @@
 need karman.xml
 run $SOLVER karman.xml
 csvdiff output/karman_Log_P00_00000000.csv
-diff output/karman_VTK_P00_00001000.pvti
-sha1 output/karman_VTK_P00_00001000.vti
+pvtidiff output/karman_VTK_P00_00001000.pvti
+run mpirun -np 2 $SOLVER karman.xml . '@oversubscribe_gpu' = true
+csvdiff output/karman_Log_P00_00000000.csv
+pvtidiff output/karman_VTK_P00_00001000.pvti

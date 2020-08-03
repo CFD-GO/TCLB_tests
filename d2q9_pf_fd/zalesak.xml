@@ -49,6 +49,6 @@
 	<CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
 	<!-- prepared for full round in 5000 steps-->
 	<Solve Iterations="600">
-		<VTK Iterations="100"/>
+		<VTK Iterations="600"/>
 	</Solve>
 </CLBConfig>

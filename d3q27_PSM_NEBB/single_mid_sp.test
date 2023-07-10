@@ -1,0 +1,6 @@
+need cube32.xml
+need single_mid_sp.xml
+run mpirun -np 1 $MODELBIN/main cube32.xml : -np 1 $MODELBIN/simplepart single_mid_sp.xml
+csvdiff output/cube32_Log_P00_00000000.csv
+csvdiff output/forces.csv
+pvtidiff output/cube32_VTK_P00_00000100.pvti

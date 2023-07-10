@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CLBConfig version="2.0" permissive="true" output="output/">
+	<Geometry nx="32" ny="32" nz="32">
+		<BGK><Box/></BGK>
+	</Geometry>
+	<Model>
+		<Param name="nu" value="0.02"/>
+        <RemoteForceInterface integrator="SIMPLEPART"/>
+	</Model>
+	<VTK Iterations="100" what="U,Solid"/>
+	<Log Iterations="1"/>
+	<Solve Iterations="100"/>
+</CLBConfig>

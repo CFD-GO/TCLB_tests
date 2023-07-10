@@ -1,0 +1,5 @@
+<SimplePart dt="1" ax="0.002" afreq="0.005">
+	<Particle x="16" y="0" z="0" r="5" log="y"/>
+	<Periodic x="32" y="32" z="32"/>
+	<Log name="output/forces.csv" Iterations="1"/>
+</SimplePart>

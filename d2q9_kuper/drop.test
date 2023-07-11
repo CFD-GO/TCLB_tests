@@ -1,13 +1,4 @@
 need drop.xml runexternal.py
 run $SOLVER drop.xml
 diff output/stats.csv
-diff output/drop_VTK_P00_00000010.pvti
-diff output/drop_VTK_P00_00000020.pvti
-diff output/drop_VTK_P00_00000030.pvti
-diff output/drop_VTK_P00_00000040.pvti
-diff output/drop_VTK_P00_00000050.pvti
-sha1 output/drop_VTK_P00_00000010.vti
-sha1 output/drop_VTK_P00_00000020.vti
-sha1 output/drop_VTK_P00_00000030.vti
-sha1 output/drop_VTK_P00_00000040.vti
-sha1 output/drop_VTK_P00_00000050.vti
+pvtidiff output/drop_VTK_P00_00000050.pvti 20

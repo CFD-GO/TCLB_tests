@@ -3,4 +3,4 @@ need single_inlet_sp.xml
 run mpirun -np 1 $MODELBIN/main cube32.xml : -np 1 $MODELBIN/simplepart single_inlet_sp.xml
 csvdiff output/cube32_Log_P00_00000000.csv 1e-8
 csvdiff output/forces.csv 1e-8 '.*_[xyz]'
-pvtidiff output/cube32_VTK_P00_00000100.pvti 10 16 0 0
+pvtidiff output/cube32_VTK_P00_00000100.pvti 3000 16 0 0

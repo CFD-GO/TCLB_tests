@@ -1,0 +1,5 @@
+need falling_droplet.xml
+run $MODELBIN/main falling_droplet.xml
+csvdiff output/falling_droplet_Log_P00_00000000.csv 1e-8
+pvtidiff output/falling_droplet_VTK_P00_00000000.pvti
+pvtidiff output/falling_droplet_VTK_P00_00001000.pvti

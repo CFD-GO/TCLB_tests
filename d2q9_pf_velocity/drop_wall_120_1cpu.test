@@ -1,5 +1,0 @@
-need drop_wall_120.xml
-run $MODELBIN/main drop_wall_120.xml
-csvdiff output/drop_wall_120_Log_P00_00000000.csv 1e-8
-pvtidiff output/drop_wall_120_VTK_P00_00000000.pvti
-pvtidiff output/drop_wall_120_VTK_P00_00000500.pvti

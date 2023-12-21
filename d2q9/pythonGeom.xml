@@ -18,15 +18,18 @@
 		</Outlet>
 		<Wall mask="ALL">
 			<Channel/>
-			<PythonInline ny="50"><![CDATA[
-import numpy               
-def test(*args, **kwargs):
-    x,y,z = args
-    
-    return y < (numpy.sin(numpy.pi*x*2) / 2. + 0.5  )
-        ]]></PythonInline>
 		</Wall>
 	</Geometry>
+	<RunR><![CDATA[
+		x = (Solver$Geometry$X-0.5)/1024
+		y = (Solver$Geometry$Y-0.5)/50
+		sel = y < sin(pi*x*2)/2 + 0.5
+		print(mean(sel))
+		Solver$Geometry$BOUNDARY[sel] = "Wall"
+		Solver$Geometry$COLLISION[sel] = "None"
+		Solver$Geometry$OBJECTIVE[sel] = "None"
+		Solver$Geometry$SETTINGZONE[sel] = "DefaultZone"
+	]]></RunR>
 	<Model>
 		<Param name="VelocityX" value="0.01"/>
 		<Param name="Viscosity" value="0.02"/>

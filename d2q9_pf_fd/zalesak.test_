@@ -1,3 +1,0 @@
-need zalesak.py zalesak.xml
-run $SOLVER zalesak.xml
-pvtidiff output/zalesak_VTK_P00_00000600.pvti

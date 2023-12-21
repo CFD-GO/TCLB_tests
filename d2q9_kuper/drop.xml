@@ -22,6 +22,9 @@
 		<Param name="MovingWallVelocity" value="0.000"/>
 	</Model>
 	<VTK Iterations="10"/>
-	<CallPython module="runexternal" function="test" quantities="Rho"/> 
+	<RunR>
+		rho = Solver$Quantities$Rho
+		write.csv(data.frame(max=max(rho),min=min(rho)), 'output/stats.csv', row.names=FALSE, col.names=FALSE)
+	</RunR>
 	<Solve Iterations="50"/>
 </CLBConfig>

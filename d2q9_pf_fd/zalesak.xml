@@ -4,22 +4,6 @@
 		<MRT>
 			<Box/>
 		</MRT>
-		<!--      <EPressure> 
-                <Box dx="-1"/>
-            </EPressure>
-            <WPressure>
-                <Box nx="1"/>
-            </WPressure>
-
-          
-            <SPressure>
-                <Box ny="1"/>
-            </SPressure>
-
-            <NPressure>
-                <Box dy="-1"/>
-            </NPressure>
--->
 		<None name="disc">
 			<Sphere nx="64" ny="64" dx="96" dy="96"/>
 		</None>
@@ -36,18 +20,22 @@
 		<Param name="GravitationX" value="0.0000"/>
 		<Param name="GravitationY" value="0.0000"/>
 	</Model>
-	<!--
-     module.py must be in pythonpath
-     the "." is added to pythonpath automaticly
-     PYTHONPATH=$PYTHONPATH:./example mpirun -np 2 ./CLB/d2q9/main example/runexternal.xml 
--->
-	<!-- for nic result let phase field equalibrate BEFORE move
-    <Solve Iterations="2000" output="output/">
-        <VTK Iterations="500"/>
-    </Solve> 
-    -->
-	<CallPython module="zalesak" function="setSwirl" densities="BC[0],BC[1]"/>
-	<!-- prepared for full round in 5000 steps-->
+	<RunR>
+		X = Solver$Geometry$X - 0.5
+		Y = Solver$Geometry$Y - 0.5
+		X = X - max(X)/2
+		Y = Y - max(Y)/2
+		L = max(X)
+		X = X / L
+		Y = Y / L
+	
+		R = sqrt(X^2 + Y^2)
+		phi = atan2(X,Y)
+		c = (L * pi / 50000) *(1 - tanh(10*(R-0.8)))
+	
+		Solver$Fields$`BC[0]` =  c * R * cos(phi)
+		Solver$Fields$`BC[1]` = -c * R * sin(phi)
+	</RunR>
 	<Solve Iterations="600">
 		<VTK Iterations="600"/>
 	</Solve>

@@ -13,12 +13,23 @@
 	</Geometry>
 	<Model>
 	</Model>
-	<!--
-     module.py must be in pythonpath
-     the "." is added to pythonpath automaticly
-     PYTHONPATH=$PYTHONPATH:./example mpirun -np 2 ./CLB/d2q9/main example/runexternal.xml 
-    -->
-	<CallPython module="runexternal" function="test" densities="BC[0],BC[1]"/>
+	<RunR>
+		X = Solver$Geometry$X - 0.5
+		Y = Solver$Geometry$Y - 0.5
+
+		L = max(X)
+		X = X / L - 0.5
+		Y = Y / L
+		Y = Y - 0.5 * max(Y)
+
+		R = sqrt(X^2 + Y^2)
+		Theta = atan2(Y,X)
+		c1 = 60
+		c2 = 0.0001
+
+		Solver$Fields$`BC[1]` = cos(Theta) * exp(-c1*R^2) * c2
+		Solver$Fields$`BC[0]` = -sin(Theta) * exp(-c1*R^2) * c2
+	</RunR>
 	<Solve Iterations="100">
 		<VTK Iterations="100"/>
 	</Solve>

@@ -1,0 +1,4 @@
+need karman_rs.xml
+run $SOLVER karman_rs.xml
+run $SOLVER output/karman_rs_restart_00000500.xml
+pvtidiff output/karman_rs_restart_00000500_VTK_P00_00000500.pvti output/karman_VTK_P00_00001000.pvti

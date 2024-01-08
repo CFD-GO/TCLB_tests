@@ -1,0 +1,4 @@
+need karman_rs.xml
+run mpirun -np 2 $SOLVER karman_rs.xml . '@oversubscribe_gpu' = true
+run mpirun -np 2 $SOLVER output/karman_rs_restart_00000500.xml . '@oversubscribe_gpu' = true
+pvtidiff output/karman_rs_restart_00000500_VTK_P00_00000500.pvti output/karman_VTK_P00_00001000.pvti

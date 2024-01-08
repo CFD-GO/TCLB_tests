@@ -1,3 +1,4 @@
-need runexternal.py runexternal.xml
+need runexternal.py
+need runexternal.xml
 run $SOLVER runexternal.xml
 pvtidiff output/runexternal_VTK_P00_00000100.pvti

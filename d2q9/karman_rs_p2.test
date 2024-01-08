@@ -1,4 +1,12 @@
 need karman_rs.xml
 run mpirun -np 2 $SOLVER karman_rs.xml . '@oversubscribe_gpu' = true
+exists output/karman_rs_restart_00000500.xml
+exists output/karman_rs_checkpoint_00000500_0.pri
+exists output/karman_rs_checkpoint_00000500_1.pri
 run mpirun -np 2 $SOLVER output/karman_rs_restart_00000500.xml . '@oversubscribe_gpu' = true
+exists output/karman_rs_restart_00000500_restart_00000500.xml
+exists output/karman_rs_restart_00000500_checkpoint_00000500_0.pri
+exists output/karman_rs_restart_00000500_checkpoint_00000500_1.pri
 pvtidiff output/karman_rs_restart_00000500_VTK_P00_00000500.pvti output/karman_VTK_P00_00001000.pvti
+csvconcatenate -o result.csv output/karman_rs_Log_P00_00000000.csv output/karman_rs_restart_00000500_Log_P00_00000000.csv
+csvdiff result.csv output/karman_Log_P00_00000000.csv

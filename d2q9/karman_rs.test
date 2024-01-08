@@ -1,4 +1,10 @@
 need karman_rs.xml
 run $SOLVER karman_rs.xml
+exists output/karman_rs_restart_00000500.xml
+exists output/karman_rs_checkpoint_00000500_0.pri
 run $SOLVER output/karman_rs_restart_00000500.xml
+exists output/karman_rs_restart_00000500_restart_00000500.xml
+exists output/karman_rs_restart_00000500_checkpoint_00000500_0.pri
 pvtidiff output/karman_rs_restart_00000500_VTK_P00_00000500.pvti output/karman_VTK_P00_00001000.pvti
+csvconcatenate -o result.csv output/karman_rs_Log_P00_00000000.csv output/karman_rs_restart_00000500_Log_P00_00000000.csv
+csvdiff result.csv output/karman_Log_P00_00000000.csv
